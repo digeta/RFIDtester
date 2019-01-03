@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@raw/step01"
+    tools:context=".MainActivity" >
+
+    <ImageView 
+        android:id="@+id/imgShape"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/shape"
+        />
+    
+	    <LinearLayout 
+	        android:id="@+id/divTopLeft"
+	        android:orientation="horizontal"
+	        android:layout_width="200dp"
+	        android:layout_height="200dp"
+	        android:background="@color/Yellow"
+	        ></LinearLayout>
+	
+	    <LinearLayout 
+	        android:id="@+id/divTopRight"
+	        android:orientation="horizontal"
+	        android:layout_width="200dp"
+	        android:layout_height="200dp"
+	        android:background="@color/Blue"
+	        android:layout_toRightOf="@id/divTopLeft"
+	        ></LinearLayout>
+	        
+	    <LinearLayout 
+	        android:id="@+id/divBottomLeft"
+	        android:orientation="horizontal"
+	        android:layout_width="200dp"
+	        android:layout_height="200dp"
+	        android:background="@color/Red"  
+	        android:layout_below="@id/divTopLeft"      
+	        ></LinearLayout>    
+	        
+	    <LinearLayout 
+	        android:id="@+id/divBottomRight"
+	        android:orientation="horizontal"
+	        android:layout_width="200dp"
+	        android:layout_height="200dp"
+	        android:background="@color/White"  
+	        android:layout_below="@id/divTopRight"    
+	        android:layout_toRightOf="@id/divBottomLeft"  
+	        ></LinearLayout>
+      
+    <EditText
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/persText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/statusText"
+        android:layout_alignBottom="@+id/statusText"
+        android:layout_marginLeft="46dp"
+        android:layout_toRightOf="@+id/statusText"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <EditText
+        android:id="@+id/kartText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ButonAc"
+        android:layout_alignBottom="@+id/ButonAc"
+        android:layout_alignLeft="@+id/persText"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <Button
+        android:id="@+id/ButonAc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/persText"
+        android:layout_marginRight="82dp"
+        android:minHeight="150dp"
+        android:minWidth="300dp"
+        android:onClick="Button_portAc"
+        android:text="Kart Okuma Aç"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/ButonKapat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ButonAc"
+        android:layout_below="@+id/ButonAc"
+        android:editable="false"
+        android:enabled="false"
+        android:minHeight="150dp"
+        android:minWidth="300dp"
+        android:onClick="Button_portKapat"
+        android:text="Kart Okuma Kapat"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ButonKapat"
+        android:layout_below="@+id/ButonKapat"
+        android:layout_marginTop="22dp"
+        android:onClick="resetDB"
+        android:text="Resetle" android:layout_alignParentRight="false"/>
+
+    <ImageView
+        android:id="@+id/imgOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/persText"
+        android:layout_marginRight="47dp"
+        android:layout_toLeftOf="@+id/imgOff"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imgOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgOn"
+        android:layout_toLeftOf="@+id/button1"
+        android:src="@drawable/ic_launcher" />
+
+</RelativeLayout>
